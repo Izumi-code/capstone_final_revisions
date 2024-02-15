@@ -1,0 +1,3 @@
+BacterialBlight
+Blast
+BrownSpot
