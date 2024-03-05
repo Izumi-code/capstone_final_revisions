@@ -94,10 +94,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     # - assets/images
-    - assets/new_rice_pest/model_unquant.tflite
-    - assets/new_rice_pest/labels.txt
-    - assets/new_rice_disease/model_unquant.tflite
-    - assets/new_rice_disease/labels.txt
+    # - assets/new_rice_pest/model_unquant.tflite
+    # - assets/new_rice_pest/labels.txt
+    # - assets/new_rice_disease/model_unquant.tflite
+    # - assets/new_rice_disease/labels.txt
     - assets/images/rice.jpg
     - assets/images/coconut.jpg
     - assets/images/banana.jpg
@@ -110,10 +110,10 @@ flutter:
     - assets/images/tomato.jpg
     - assets/images/google.jpg
     - assets/images/apple.jpg
-    - assets/rice_pest/model_unquant.tflite
-    - assets/rice_disease/model_unquant.tflite
-    - assets/rice_pest/labels.txt
-    - assets/rice_disease/labels.txt
+    # - assets/rice_pest/model_unquant.tflite
+    # - assets/rice_disease/model_unquant.tflite
+    # - assets/rice_pest/labels.txt
+    # - assets/rice_disease/labels.txt
     - assets/images/rice_disease.jpg
     - assets/images/rice_pest.jpg
     - assets/images/cloud-in-blue-sky.jpg
@@ -127,11 +127,11 @@ flutter:
     - assets/images/mist.png
     - assets/images/farm.png
     - assets/images/newimage/
-    - assets/detect_pest/detect.tflite
-    - assets/detect_pest/labels.txt
-    - assets/detect_pest/new.tflite
-    - assets/detect_pest/ricepestyolo.tflite
-    - assets/detect_pest/labelmap.txt
+    # - assets/detect_pest/detect.tflite
+    # - assets/detect_pest/labels.txt
+    # - assets/detect_pest/new.tflite
+    # - assets/detect_pest/ricepestyolo.tflite
+    # - assets/detect_pest/labelmap.txt
     - assets/models/
     - assets/labels/
     - assets/images/

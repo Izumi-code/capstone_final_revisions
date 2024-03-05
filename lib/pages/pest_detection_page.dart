@@ -746,7 +746,7 @@ class _PestDetectionPageState extends State<PestDetectionPage> {
 
   Future<void> loadModel() async {
     String pathObjectDetectionModel =
-        "assets/models/pest-200-64-M-v1dataset.torchscript";
+        "assets/models/rice-pest-100-s-latestv3-416-export640.torchscript";
     try {
       _objectModel = await FlutterPytorch.loadObjectDetectionModel(
         pathObjectDetectionModel,
@@ -768,8 +768,8 @@ class _PestDetectionPageState extends State<PestDetectionPage> {
 
     _objDetect = await _objectModel.getImagePrediction(
       imageBytes,
-      minimumScore: 0.4,
-      IOUThershold: 0.4,
+      minimumScore: 0.5,
+      IOUThershold: 0.5,
     );
 
     await storeDetectedPest();
