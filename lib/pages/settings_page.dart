@@ -221,30 +221,30 @@ class _SettingsPageState extends State<SettingsPage> {
               text: 'Account Settings',
               onTap: showUpdateDialog,
             ),
-            StackButton(
-              text: 'Privacy and Security',
-              onTap: () {
-                // Handle Privacy and Security
-              },
-            ),
-            StackButton(
-              text: 'Appearance',
-              onTap: () {
-                // Handle Appearance
-              },
-            ),
-            StackButton(
-              text: 'Help and Support',
-              onTap: () {
-                // Handle Help and Support
-              },
-            ),
-            StackButton(
-              text: 'Report a Bug',
-              onTap: () {
-                // Handle Report a Bug
-              },
-            ),
+            // StackButton(
+            //   text: 'Privacy and Security',
+            //   onTap: () {
+            //     // Handle Privacy and Security
+            //   },
+            // ),
+            // StackButton(
+            //   text: 'Appearance',
+            //   onTap: () {
+            //     // Handle Appearance
+            //   },
+            // ),
+            // StackButton(
+            //   text: 'Help and Support',
+            //   onTap: () {
+            //     // Handle Help and Support
+            //   },
+            // ),
+            // StackButton(
+            //   text: 'Report a Bug',
+            //   onTap: () {
+            //     // Handle Report a Bug
+            //   },
+            // ),
             StackButton(
               text: 'Logout',
               onTap: () {
