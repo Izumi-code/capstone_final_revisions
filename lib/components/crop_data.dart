@@ -61,6 +61,8 @@ List<Crop> crops = [
     imagePath: 'assets/images/rice.jpg',
     details: 'Best practices for rice cultivation...',
     youtubeVideoId: 'xiyvvBTraPg',
+    pdfAssetPath:
+        'assets/crop_manual/12-Steps-Required-for-Successful-Rice-Production.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''
@@ -250,6 +252,7 @@ http://www.knowledgebank.irri.org/step-by-step-production/growth/pests-and-disea
     name: 'Coconut',
     imagePath: 'assets/images/coconut.jpg',
     details: 'Best practices for coconut cultivation...',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     youtubeVideoId: '1IBRuqLNtic',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
@@ -497,6 +500,7 @@ Source:
     imagePath: 'assets/images/sugarcane.jpg',
     details: 'Best practices for sugarcane cultivation...',
     youtubeVideoId: 'KtxhHIx1mH0',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''Sugarcane does not require a special type of soil. Best soils are those that are more than 1 m deep but deep rooting to a depth of up to 5 m is possible. The soil should preferably be well-aerated (after heavy rain the pore space filled with air > 10 to 12 percent) and have a total available water content of 15 percent or more. When there is a groundwater table it should be more than 1.5 to 2.0 m below the surface. The optimum soil pH is about 6.5 but sugarcane will grow in soils with pH in the range of 5 to 8.5''',
@@ -704,6 +708,7 @@ Source:
     imagePath: 'assets/images/corn.jpg',
     details: 'Best practices for corn cultivation...',
     youtubeVideoId: 'vC_L7CUWujw',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''
@@ -897,6 +902,7 @@ https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_cereals_ma
     imagePath: 'assets/images/banana.jpg',
     details: 'Best practices for banana cultivation...',
     youtubeVideoId: 'rE5Y5Hd8R9k',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''
@@ -1083,6 +1089,7 @@ https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_fruits_ban
     imagePath: 'assets/images/mango.jpg',
     details: 'Best practices for mango cultivation...',
     youtubeVideoId: 'yisPBjcEHsk',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''
@@ -1282,6 +1289,7 @@ https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_fruits_man
     imagePath: 'assets/images/pineapple.jpg',
     details: 'Best practices for pineapple cultivation...',
     youtubeVideoId: 'lidBMLuWCtY',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''
@@ -1416,6 +1424,7 @@ https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_fruits_pin
     imagePath: 'assets/images/coffee.jpg',
     details: 'Best practices for coffee cultivation...',
     youtubeVideoId: 'Fjq1WO-h3Xw',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''
@@ -1599,6 +1608,7 @@ https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_plantation
     imagePath: 'assets/images/tomato.jpg',
     details: 'Best practices for tomato cultivation...',
     youtubeVideoId: 'woi4Q2LXby4',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''
@@ -1820,6 +1830,7 @@ https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_tomato
     imagePath: 'assets/images/cassava.jpeg',
     details: 'Best practices for cassava cultivation...',
     youtubeVideoId: 'viGqjfn4CGE',
+    pdfAssetPath: 'https://www.example.com/rice.pdf',
     topicContent: {
       'Soil Health: Basics of soil testing and soil improvement techniques.':
           '''

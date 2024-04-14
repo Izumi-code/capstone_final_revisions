@@ -70,6 +70,8 @@ dependencies:
   flutter_speed_dial: ^4.0.2
   pytorch_lite: ^4.2.4
   pigeon: ^11.0.0
+  flutter_pdfview: ^1.2.5
+  flutter_cached_pdfview: ^0.4.2
   
   
 
@@ -140,6 +142,7 @@ flutter:
     - assets/labels/
     - assets/images/
     - assets/images/dentskanload.gif
+    - assets/crop_manual/12-Steps-Required-for-Successful-Rice-Production.pdf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

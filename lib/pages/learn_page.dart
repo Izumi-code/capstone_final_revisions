@@ -8,49 +8,55 @@
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-//       // appBar: AppBar(
-//       //   title: Text('Learn'),
-//       // ),
 //       appBar: AppBar(
-//         backgroundColor: Colors.black,
+//         backgroundColor: Colors.green[600], // Adjust the app bar color
 //         foregroundColor: Colors.white,
 //         leading: IconButton(
 //           icon: Image.asset(
-//             'assets/images/newimage/agrosense.png', // Replace with the actual path to your custom icon
-//             width: 30, // Adjust the width as needed
-//             height: 30, // Adjust the height as needed
-//             // color: Colors.white,
+//             'assets/images/newimage/agrosense.png',
+//             width: 30,
+//             height: 30,
 //           ),
-//           onPressed: () {
-//             // Add functionality when the custom icon is pressed
-//           },
+//           onPressed: () {},
 //         ),
-//         title: Text('AgroSense'), // Customize the app bar title
+//         title: Text(
+//           'AgroSense',
+//           style: TextStyle(fontWeight: FontWeight.bold),
+//         ),
 //       ),
-//       body: SafeArea(
-//         child: ListView.builder(
-//           itemCount: crops.length,
-//           itemBuilder: (context, index) {
-//             return Card(
-//               child: ListTile(
-//                 leading: Image.asset(
-//                   crops[index].imagePath,
-//                   width: 50,
-//                   height: 50,
-//                   fit: BoxFit.cover,
+//       body: Container(
+//         color: Colors.grey[200], // Adjust the background color
+//         child: SafeArea(
+//           child: ListView.builder(
+//             itemCount: crops.length,
+//             itemBuilder: (context, index) {
+//               return Card(
+//                 margin: EdgeInsets.all(8),
+//                 color: Colors.white, // Adjust the card color
+//                 child: ListTile(
+//                   leading: Image.asset(
+//                     crops[index].imagePath,
+//                     width: 50,
+//                     height: 50,
+//                     fit: BoxFit.cover,
+//                   ),
+//                   title: Text(
+//                     crops[index].name,
+//                     style: TextStyle(fontWeight: FontWeight.bold),
+//                   ),
+//                   onTap: () {
+//                     Navigator.push(
+//                       context,
+//                       MaterialPageRoute(
+//                         builder: (context) =>
+//                             CropDetailsPage(crop: crops[index]),
+//                       ),
+//                     );
+//                   },
 //                 ),
-//                 title: Text(crops[index].name),
-//                 onTap: () {
-//                   Navigator.push(
-//                     context,
-//                     MaterialPageRoute(
-//                       builder: (context) => CropDetailsPage(crop: crops[index]),
-//                     ),
-//                   );
-//                 },
-//               ),
-//             );
-//           },
+//               );
+//             },
+//           ),
 //         ),
 //       ),
 //     );
@@ -67,19 +73,42 @@
 //     return Scaffold(
 //       appBar: AppBar(
 //         title: Text(crop.name),
+//         backgroundColor: Colors.green[600], // Adjust the app bar color
 //       ),
 //       body: Column(
 //         crossAxisAlignment: CrossAxisAlignment.start,
 //         children: [
-//           YoutubePlayer(
-//             controller: YoutubePlayerController(
-//               initialVideoId: crop.youtubeVideoId,
-//               flags: YoutubePlayerFlags(
-//                 autoPlay: true,
-//                 mute: false,
+//           Container(
+//             decoration: BoxDecoration(
+//               borderRadius:
+//                   BorderRadius.circular(12), // Adjust the radius as needed
+//               boxShadow: [
+//                 BoxShadow(
+//                   color: Colors.grey.withOpacity(0.5),
+//                   spreadRadius: 3,
+//                   blurRadius: 7,
+//                   offset: Offset(0, 3), // changes position of shadow
+//                 ),
+//               ],
+//             ),
+//             margin: EdgeInsets.all(16),
+//             child: ClipRRect(
+//               borderRadius:
+//                   BorderRadius.circular(12), // Same as above for consistency
+//               child: AspectRatio(
+//                 aspectRatio: 16 / 9, // Adjust aspect ratio as needed
+//                 child: YoutubePlayer(
+//                   controller: YoutubePlayerController(
+//                     initialVideoId: crop.youtubeVideoId,
+//                     flags: YoutubePlayerFlags(
+//                       autoPlay: true,
+//                       mute: false,
+//                     ),
+//                   ),
+//                   showVideoProgressIndicator: true,
+//                 ),
 //               ),
 //             ),
-//             showVideoProgressIndicator: true,
 //           ),
 //           Expanded(
 //             child: ListView.builder(
@@ -87,8 +116,13 @@
 //               itemBuilder: (context, index) {
 //                 var topic = crop.topicContent.keys.elementAt(index);
 //                 return Card(
+//                   margin: EdgeInsets.all(8),
+//                   color: Colors.white, // Adjust the card color
 //                   child: ListTile(
-//                     title: Text(topic),
+//                     title: Text(
+//                       topic,
+//                       style: TextStyle(fontWeight: FontWeight.bold),
+//                     ),
 //                     onTap: () {
 //                       Navigator.push(
 //                         context,
@@ -124,9 +158,8 @@
 // class _TopicDetailsPageState extends State<TopicDetailsPage> {
 //   late GoogleTranslator translator;
 //   String translatedContent = "";
-//   String selectedLanguage = 'en'; // Default language is English
+//   String selectedLanguage = 'en';
 
-//   // Language codes
 //   static const String englishCode = 'en';
 
 //   Map<String, String> languageMap = {
@@ -139,7 +172,7 @@
 //   void initState() {
 //     super.initState();
 //     translator = GoogleTranslator();
-//     translateContent(); // Initial translation
+//     translateContent();
 //   }
 
 //   void translateContent() async {
@@ -155,9 +188,9 @@
 //   void changeLanguage(String language) {
 //     setState(() {
 //       selectedLanguage = language;
-//       translatedContent = ''; // Clear the translated content
+//       translatedContent = '';
 //     });
-//     translateContent(); // Trigger translation with the new language
+//     translateContent();
 //   }
 
 //   List<DropdownMenuItem<String>> getDropdownItems() {
@@ -174,6 +207,7 @@
 //     return Scaffold(
 //       appBar: AppBar(
 //         title: Text(widget.topic),
+//         backgroundColor: Colors.green[600], // Adjust the app bar color
 //       ),
 //       body: Padding(
 //         padding: EdgeInsets.all(16),
@@ -194,13 +228,11 @@
 //                   translatedContent.isNotEmpty ? translatedContent : '',
 //                   style: TextStyle(
 //                     fontSize: 18,
-//                     fontFamily:
-//                         'Roboto', // Change to your preferred font family
-//                     color:
-//                         Colors.black87, // Change to your preferred text color
+//                     fontFamily: 'Roboto',
+//                     color: Colors.black87,
 //                     fontWeight: FontWeight.normal,
 //                     letterSpacing: 0.5,
-//                     height: 1.4, // Adjust line height for better readability
+//                     height: 1.4,
 //                   ),
 //                 ),
 //               ),
@@ -213,6 +245,8 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:capstone_project/components/pdfviewer.dart';
+
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:capstone_project/components/crop_data.dart';
 import 'package:capstone_project/components/crop.dart';
@@ -223,7 +257,7 @@ class LearnPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green[600], // Adjust the app bar color
+        backgroundColor: Colors.green[600],
         foregroundColor: Colors.white,
         leading: IconButton(
           icon: Image.asset(
@@ -239,14 +273,14 @@ class LearnPage extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Colors.grey[200], // Adjust the background color
+        color: Colors.grey[200],
         child: SafeArea(
           child: ListView.builder(
             itemCount: crops.length,
             itemBuilder: (context, index) {
               return Card(
                 margin: EdgeInsets.all(8),
-                color: Colors.white, // Adjust the card color
+                color: Colors.white,
                 child: ListTile(
                   leading: Image.asset(
                     crops[index].imagePath,
@@ -287,20 +321,52 @@ class CropDetailsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(crop.name),
-        backgroundColor: Colors.green[600], // Adjust the app bar color
+        backgroundColor: Colors.green[600],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          YoutubePlayer(
-            controller: YoutubePlayerController(
-              initialVideoId: crop.youtubeVideoId,
-              flags: YoutubePlayerFlags(
-                autoPlay: true,
-                mute: false,
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 3,
+                  blurRadius: 7,
+                  offset: Offset(0, 3),
+                ),
+              ],
+            ),
+            margin: EdgeInsets.all(16),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: AspectRatio(
+                aspectRatio: 16 / 9,
+                child: YoutubePlayer(
+                  controller: YoutubePlayerController(
+                    initialVideoId: crop.youtubeVideoId,
+                    flags: YoutubePlayerFlags(
+                      autoPlay: true,
+                      mute: false,
+                    ),
+                  ),
+                  showVideoProgressIndicator: true,
+                ),
               ),
             ),
-            showVideoProgressIndicator: true,
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      PdfViewerPage(pdfAssetPath: crop.pdfAssetPath),
+                ),
+              );
+            },
+            child: Text('View PDF'),
           ),
           Expanded(
             child: ListView.builder(
@@ -309,7 +375,7 @@ class CropDetailsPage extends StatelessWidget {
                 var topic = crop.topicContent.keys.elementAt(index);
                 return Card(
                   margin: EdgeInsets.all(8),
-                  color: Colors.white, // Adjust the card color
+                  color: Colors.white,
                   child: ListTile(
                     title: Text(
                       topic,
@@ -322,6 +388,7 @@ class CropDetailsPage extends StatelessWidget {
                           builder: (context) => TopicDetailsPage(
                             topic: topic,
                             content: crop.topicContent[topic]!,
+                            pdfUrl: crop.pdfAssetPath,
                           ),
                         ),
                       );
@@ -340,8 +407,10 @@ class CropDetailsPage extends StatelessWidget {
 class TopicDetailsPage extends StatefulWidget {
   final String topic;
   final String content;
+  final String pdfUrl;
 
-  TopicDetailsPage({required this.topic, required this.content});
+  TopicDetailsPage(
+      {required this.topic, required this.content, required this.pdfUrl});
 
   @override
   _TopicDetailsPageState createState() => _TopicDetailsPageState();
@@ -399,7 +468,7 @@ class _TopicDetailsPageState extends State<TopicDetailsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.topic),
-        backgroundColor: Colors.green[600], // Adjust the app bar color
+        backgroundColor: Colors.green[600],
       ),
       body: Padding(
         padding: EdgeInsets.all(16),
@@ -428,6 +497,18 @@ class _TopicDetailsPageState extends State<TopicDetailsPage> {
                   ),
                 ),
               ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        PdfViewerPage(pdfAssetPath: widget.pdfUrl),
+                  ),
+                );
+              },
+              child: Text('View PDF'),
             ),
           ],
         ),
