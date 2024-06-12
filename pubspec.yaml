@@ -72,7 +72,7 @@ dependencies:
   pigeon: ^11.0.0
   flutter_pdfview: ^1.2.5
   flutter_cached_pdfview: ^0.4.2
-  
+  flutter_tts: ^4.0.2
   
 
 dev_dependencies:
